@@ -18,7 +18,9 @@ module.exports = {
           use: [
             {
               loader: 'file-loader',
-              options: {}
+              options: {
+                publicPath: 'https://scholtzk.github.io/penispenishaha/'
+              }
             }
           ]
         },
