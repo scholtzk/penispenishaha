@@ -1,4 +1,4 @@
-import * as THREE from './three.js-master/build/three.js';
+import * as THREE from 'three';
 import images from './images';
 import vertex from './shaders/vertex.glsl';
 import fragment from './shaders/fragment.glsl';
