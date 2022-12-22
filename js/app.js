@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from 'https://cdn.skypack.dev/three';
 import images from './images';
 import vertex from './shaders/vertex.glsl';
 import fragment from './shaders/fragment.glsl';
