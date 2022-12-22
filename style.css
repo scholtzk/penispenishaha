@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "glitch";
+  src: url(VT323-Regular.woff) format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: glitch;
+  font-size: 1.5rem;
+  color: #f4f4f4;
+}
+
+
+html,
+body {
+  background-image: url("https://media0.giphy.com/media/5BYCbzhKPrjHCHBezb/giphy.gif?cid=ecf05e47cv1rdmpd3vcufth7uvuc0urmbxq47bnl5qjen1ea&rid=giphy.gif&ct=g");
+  /*background-color: black;*/
+  cursor: none;
+  background-size: 1980px 1080px;
+  overflow: hidden;
+}
+
+canvas {
+  position: absolute;
+  z-index: -2;
+}
+
+.cursor
+{
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+width: 100px;
+height: 50px;
+
+background-image: url(images/eye2.gif);
+background-size: auto;
+background-repeat: no-repeat;
+}
+
+main {
+  z-index: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+
+
+ul {
+  position: absolute;
+  left: 7%;
+  top: 30%;
+  height: 60%;
+  width: 80%;
+  list-style: none;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+
+ul li {
+  position: relative;
+  cursor: none;
+  transition: 1s;
+}
+
+ul li:hover {
+  opacity: 1 !important;
+}
+
+#body {
+  cursor   : none;
+  
+}
