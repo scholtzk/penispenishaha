@@ -10,24 +10,13 @@
   font-family: glitch;
   font-size: 1.5rem;
   color: #f4f4f4;
-  line-height: 1;
+  /*line-height: 1;
        text-shadow: 0.06rem 0 0.06rem #ea36af, -0.05rem 0 0.06rem #75fa69;
        letter-spacing: 0.525em;
        animation-duration: 0.1s;
        animation-name: textflicker;
        animation-iteration-count: 69;
-       animation-direction: alternate;
-}
-
-@keyframes textflicker {
-  from {
-    text-shadow: 1px 0 0 #fd22b4, -2px 0 0 #696efa;
-  }
-
-  to {
-    text-shadow: 1px 0.5px 1px #6cff7f, -1px -0.5px 2px #fa698d;
-  }
-
+       animation-direction: alternate;*/
 }
 
 html,

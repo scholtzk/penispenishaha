@@ -13,6 +13,7 @@
     <div class="photos" id="photos"></div>
     <div class="cursor" id="cursor"></div>
     <div class="images" id="images"></div>
+    <div class= "images" id="intro"></div>
 <script>
 
 const cursor = document.querySelector('.cursor');
@@ -31,11 +32,16 @@ document.addEventListener('mousemove', e => {
             <li><span class="dtype"></li>
          
         </ul>
+
        
     </main>
     <!--script src="./js/app.js"></script-->
     <!--script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.js" integrity="sha512-NLtnLBS9Q2w7GKK9rKxdtgL7rA7CAS85uC/0xd9im4J/yOL4F9ZVlv634NAM7run8hz3wI2GabaA6vv8vJtHiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script-->    
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="Blotter-master/build/blotter.js"></script>
+    <script src="Blotter-master/build/materials/liquidDistortMaterial.js"></script>
+    <script src="Blotter-master/build/materials/channelSplitMaterial.js"></script>
+    <script src="Blotter-master/build/materials/rollingDistortMaterial.js"></script>
     <script>
         var typed = new Typed(".atype", {
             startDelay: 100,
@@ -68,6 +74,36 @@ document.addEventListener('mousemove', e => {
 
 
     </script>
+
+    <script>
+
+const text = new Blotter.Text("shaded spaces", {
+    family : "'Glitch'",
+    size : 50,
+    fill : "#f4f4f4"
+});
+
+let material1 = new Blotter.LiquidDistortMaterial();
+material1.uniforms.uSpeed.value = 0.1;
+
+let blotter1 = new Blotter(material1, {
+  texts : text
+});
+
+let material2 = new Blotter.ChannelSplitMaterial();
+  material2.uniforms.uOffset.value = 0.25;
+  material2.uniforms.uRotation.value = 120;
+  let blotter2 = new Blotter(material2, { texts: text });
+
+var elem = document.getElementById("intro");
+var scope1 = blotter1.forText(text);
+var scope2 = blotter2.forText(text);
+
+scope1.appendTo(elem);
+scope2.appendTo(elem);
+</script>
+
+</script>
 
 <script src="./dist/bundle.js"></script>
 
