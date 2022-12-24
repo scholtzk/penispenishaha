@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "hover-effect": "^1.1.0",
     "three": "^0.128.0",
     "typed.js": "^2.0.12"
   },
