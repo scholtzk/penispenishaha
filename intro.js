@@ -1,13 +1,3 @@
-/**
- * demo.js
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2019, Codrops
- * http://www.codrops.com
- */
 {
     const body = document.body;
     const docEl = document.documentElement;
@@ -59,19 +49,19 @@
     const createBlotterText = () => {
         const text = new Blotter.Text(textEl.innerHTML, {
             family : "'Playfair Display',serif",
-            weight: 900,
-            size : 100,
-            paddingLeft: 500,
-            paddingRight: 500,
-            paddingTop: 500,
-            paddingBottom: 500,
+            weight: 600,
+            size : 60,
+            paddingLeft: 100,
+            paddingRight: 100,
+            paddingTop: 100,
+            paddingBottom: 100,
             fill : 'white'
             
         });
         elem.removeChild(textEl);
     
         const material = new Blotter.LiquidDistortMaterial();
-        material.uniforms.uSpeed.value = 1;
+        material.uniforms.uSpeed.value = 0.1;
         material.uniforms.uVolatility.value = 0;
         material.uniforms.uSeed.value = 0.1;
         const blotter = new Blotter(material, {texts: text});
@@ -99,7 +89,10 @@
             requestAnimationFrame(render);
         }
         requestAnimationFrame(render);
-    };
+
+    }
+
+
 
     WebFont.load({
         google: {
@@ -108,6 +101,4 @@
         active: () => createBlotterText()
     });
 
-    // Preload all the images in the page.
-    imagesLoaded(document.querySelectorAll('.content__img'), {background: true}, () => body.classList.remove('loading'));
 }
