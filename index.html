@@ -8,12 +8,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
+    <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|IBM+Plex+Sans:500" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script></head>
 <body>
+    <div id="intro"></div>  
     <div class="photos" id="photos"></div>
     <div class="cursor" id="cursor"></div>
-    <div class="images" id="images"></div>
-    <div class= "images" id="intro"></div>
+    <div class="images" id="images"></div>  
 <script>
 
 const cursor = document.querySelector('.cursor');
@@ -32,7 +34,15 @@ document.addEventListener('mousemove', e => {
             <li><span class="dtype"></li>
          
         </ul>
-
+        </div>
+        <div class="content">
+            <div class="content__img-wrap">
+                <div class="content__img"></div>
+                <div class="content__img"></div>
+                <div class="content__img"></div>
+            </div>
+            <div class="content__text"><span class="content__text-inner">Shaded Spaces</span></div>
+        </div>
        
     </main>
     <!--script src="./js/app.js"></script-->
@@ -42,6 +52,9 @@ document.addEventListener('mousemove', e => {
     <script src="Blotter-master/build/materials/liquidDistortMaterial.js"></script>
     <script src="Blotter-master/build/materials/channelSplitMaterial.js"></script>
     <script src="Blotter-master/build/materials/rollingDistortMaterial.js"></script>
+    <script src="Blotter-master/build/materials/slidingDoorMaterial.js"></script>
+    <script src="Blotter-master/build/materials/fliesMaterial.js"></script>
+
     <script>
         var typed = new Typed(".atype", {
             startDelay: 100,
@@ -74,36 +87,7 @@ document.addEventListener('mousemove', e => {
 
 
     </script>
-
-    <script>
-
-const text = new Blotter.Text("shaded spaces", {
-    family : "'Glitch'",
-    size : 50,
-    fill : "#f4f4f4"
-});
-
-let material1 = new Blotter.LiquidDistortMaterial();
-material1.uniforms.uSpeed.value = 0.1;
-
-let blotter1 = new Blotter(material1, {
-  texts : text
-});
-
-let material2 = new Blotter.ChannelSplitMaterial();
-  material2.uniforms.uOffset.value = 0.25;
-  material2.uniforms.uRotation.value = 120;
-  let blotter2 = new Blotter(material2, { texts: text });
-
-var elem = document.getElementById("intro");
-var scope1 = blotter1.forText(text);
-var scope2 = blotter2.forText(text);
-
-scope1.appendTo(elem);
-scope2.appendTo(elem);
-</script>
-
-</script>
+<script src="intro.js"></script>
 
 <script src="./dist/bundle.js"></script>
 
